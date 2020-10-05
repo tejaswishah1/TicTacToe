@@ -18,8 +18,16 @@ namespace TicTacToe
                 board[i] = ' ';
             }
         }
-       
+        public void Input()
+        {
+            int i = 1;
+            Console.WriteLine("What do you want to input(X or O)?");
+            char input = char.Parse(Console.ReadLine());
+            board[i] = input;
+            i++;
         }
+
+    }
     }
 
     
