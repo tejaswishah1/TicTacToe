@@ -4,7 +4,23 @@ using System.Text;
 
 namespace TicTacToe
 {
-    class Class1
+
+    public class TikTakToeGame
     {
+        char[] board = new char[10];
+      
+        public void CreateBoard()
+        {
+            int i = 0;
+            char[] board = new char[10];
+            for (i = 1; i < 10; i++)
+            {
+                board[i] = ' ';
+            }
+        }
+       
+        }
     }
-}
+
+    
+
