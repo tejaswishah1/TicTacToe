@@ -10,6 +10,7 @@ namespace TicTacToe
             TikTakToeGame game = new TikTakToeGame();
             game.CreateBoard();
             game.Input();
+            game.ShowBoard();
 
 
         }
