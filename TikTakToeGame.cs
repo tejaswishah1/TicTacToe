@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace TicTacToe
 {
@@ -41,13 +42,18 @@ namespace TicTacToe
         }
         public void Move(int input)
         {
+            int count = 1;
             if (board[input] != ' ')
             {
                 Console.WriteLine("Position already occupied. Enter new position");
+                count = 0;
+                return count;
+                
             }
             Console.WriteLine("What do you want to enter (X or O)");
             char inputChar = char.Parse(Console.ReadLine());
             board[input] = inputChar;
+            return count;
         }
     }
         }

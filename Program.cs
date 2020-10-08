@@ -11,9 +11,15 @@ namespace TicTacToe
             game.CreateBoard();
             game.Input();
             game.ShowBoard();
+            EnterPosition:
             Console.WriteLine("Enter the position starting from top left you want to enter your next character");
             int input = int.Parse(Console.ReadLine());
             game.Move(input);
+            if (count == 0)
+            {
+                goto EnterPosition;
+            }
+            game.ShowBoard();
 
 
         }
