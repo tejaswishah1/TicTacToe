@@ -89,6 +89,30 @@ namespace TicTacToe
                 return 0;
 
             }
+        public char ComputerPlay()
+        {
+            Random random = new Random();
+        PlayAgain:
+            int compPos = random.Next(1, 9);
+            if (board[compPos] == ' ')
+            {
+                int move = random.Next(0, 2);
+                if (move == 0)
+                {
+                    board[compPos] = 'X';
+                    return 'X';
+                }
+                else
+                {
+                    board[compPos] = 'O';
+                    return 'O';
+                }
+
+            }
+            else
+            {
+                goto PlayAgain;
+            }
         }
     }
         
