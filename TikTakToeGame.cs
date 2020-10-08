@@ -55,6 +55,19 @@ namespace TicTacToe
             board[input] = inputChar;
             return count;
         }
+        public void Toss()
+        {
+            Random random = new Random();
+            int toss = random.Next(0, 2);
+            if (toss == 0)
+            {
+                Console.WriteLine("Computer's turn");
+            }
+            else
+            {
+                Console.WriteLine("Player's turn");
+            }
+        }
     }
         }
     }
