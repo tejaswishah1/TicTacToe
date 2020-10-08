@@ -36,7 +36,18 @@ namespace TicTacToe
                     Console.WriteLine(board[c] + " ");
                 }
                 Console.WriteLine("\n");
+                Console.WriteLine("-------------------");
             }
+        }
+        public void Move(int input)
+        {
+            if (board[input] != ' ')
+            {
+                Console.WriteLine("Position already occupied. Enter new position");
+            }
+            Console.WriteLine("What do you want to enter (X or O)");
+            char inputChar = char.Parse(Console.ReadLine());
+            board[input] = inputChar;
         }
     }
         }
