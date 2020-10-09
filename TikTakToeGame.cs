@@ -114,6 +114,29 @@ namespace TicTacToe
                 goto PlayAgain;
             }
         }
+        public int CheckWinningPosition(char compInput)
+        {
+            int winningPos = 0;
+            for (winningPos = 1; winningPos < 10; winningPos++)
+            {
+                if (board[winningPos] == ' ')
+                {
+                    board[winningPos] = compInput;
+                    int q = CheckWinner(compInput);
+                    if (q == 1)
+                    {
+                        board[winningPos] = ' ';
+                        return winningPos;
+                    }
+                    else
+                    {
+                        board[winningPos] = ' ';
+                        return 0;
+                    }
+                }
+            }
+            return 0;
+        }
     }
         
 
