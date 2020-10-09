@@ -155,7 +155,15 @@ namespace TicTacToe
                 }
                 return arrayOfFreeSpace;
             }
-        }
+            public int IsCenterFree()
+            {
+                if (board[5] == ' ')
+                {
+                    return 1;
+                }
+                return 0;
+            }
+            }
     }
         
 
