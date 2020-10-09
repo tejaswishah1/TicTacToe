@@ -63,6 +63,15 @@ namespace TicTacToe
                         break;
                 }
             }
+            if (c == 0)
+            {
+                Console.WriteLine("Play another Game? Enter 1.Yes, 2.No");
+                int newChoice = int.Parse(Console.ReadLine());
+                if (newChoice == 1)
+                {
+                    goto NewGame;
+                }
+            }
 
         }
        
